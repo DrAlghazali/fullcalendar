@@ -238,6 +238,8 @@ export const BASE_OPTION_REFINERS = {
   moreLinkContent: identity as Identity<CustomContentGenerator<MoreLinkContentArg>>,
   moreLinkDidMount: identity as Identity<DidMountHandler<MoreLinkMountArg>>,
   moreLinkWillUnmount: identity as Identity<WillUnmountHandler<MoreLinkMountArg>>,
+  
+  popoverCloseOnMouseEvent: Boolean,
 }
 
 type BuiltInBaseOptionRefiners = typeof BASE_OPTION_REFINERS
@@ -303,6 +305,7 @@ export const BASE_OPTION_DEFAULTS = {
   eventMinHeight: 15,
   eventMinWidth: 30,
   eventShortHeight: 30,
+  popoverCloseOnMouseEvent:true,
 }
 
 export type BaseOptionsRefined = DefaultedRefinedOptions<
